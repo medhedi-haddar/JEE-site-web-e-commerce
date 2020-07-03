@@ -1,0 +1,418 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.sql.Connection;
+import singleton.ConnectionDb;
+import java.util.Vector;
+import DAO.Article;
+import DAO.ArticleDAO;
+
+public final class administrateur_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html> <html lang=\"en\">\n");
+      out.write("<head>\n");
+      out.write("    <meta charset=\"utf-8\">\n");
+      out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
+      out.write("    <meta name=\"description\" content=\"\">\n");
+      out.write("    <meta name=\"author\" content=\"\">\n");
+      out.write("    <title>Home | E-Shopper</title>\n");
+      out.write("    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"css/font-awesome.min.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"css/prettyPhoto.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"css/price-range.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"css/animate.css\" rel=\"stylesheet\">\n");
+      out.write("\t<link href=\"css/main.css\" rel=\"stylesheet\">\n");
+      out.write("\t<link href=\"css/responsive.css\" rel=\"stylesheet\">\n");
+      out.write("    <!--[if lt IE 9]>\n");
+      out.write("    <script src=\"js/html5shiv.js\"></script>\n");
+      out.write("    <script src=\"js/respond.min.js\"></script>\n");
+      out.write("    <![endif]-->       \n");
+      out.write("    <link rel=\"shortcut icon\" href=\"images/ico/favicon.ico\">\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"144x144\" href=\"images/ico/apple-touch-icon-144-precomposed.png\">\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"114x114\" href=\"images/ico/apple-touch-icon-114-precomposed.png\">\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" sizes=\"72x72\" href=\"images/ico/apple-touch-icon-72-precomposed.png\">\n");
+      out.write("    <link rel=\"apple-touch-icon-precomposed\" href=\"images/ico/apple-touch-icon-57-precomposed.png\">\n");
+      out.write("</head><!--/head-->\n");
+      out.write("\n");
+      out.write("<body>\n");
+      out.write("\t<header id=\"header\"><!--header-->\n");
+      out.write("\t\t<div class=\"header_top\"><!--header_top-->\n");
+      out.write("\t\t\t<div class=\"container\">\n");
+      out.write("\t\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t\t<div class=\"col-sm-6\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"contactinfo\">\n");
+      out.write("\t\t\t\t\t\t\t<ul class=\"nav nav-pills\">\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-phone\"></i> (+216) 22 41 29 13</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-envelope\"></i> contact: medhedi.haddar@gmail.com</a></li>\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t\t</ul>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t<div class=\"col-sm-6\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"social-icons pull-right\">\n");
+      out.write("\t\t\t\t\t\t\t<ul class=\"nav navbar-nav\">\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-dribbble\"></i></a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n");
+      out.write("\t\t\t\t\t\t\t</ul>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div><!--/header_top-->\n");
+      out.write("\t\t\n");
+      out.write("\t\t<div class=\"header-middle\"><!--header-middle-->\n");
+      out.write("\t\t\t<div class=\"container\">\n");
+      out.write("\t\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t\t<div class=\"col-sm-3\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"logo pull-left\">\n");
+      out.write("\t\t\t\t\t\t\t<a href=\"index.html\"><img src=\"images/home/logo.png\" alt=\"\" /></a>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t<!--<div class=\"btn-group pull-right\">\n");
+      out.write("\t\t\t\t\t\t\t<div class=\"btn-group\">\n");
+      out.write("\n");
+      out.write("\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-default dropdown-toggle usa\" data-toggle=\"dropdown\">\n");
+      out.write("\t\t\t\t\t\t\t\t\tUSA\n");
+      out.write("\t\t\t\t\t\t\t\t\t<span class=\"caret\"></span>\n");
+      out.write("\t\t\t\t\t\t\t\t</button>\n");
+      out.write("\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Canada</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t<li><a href=\"#\">UK</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t</ul>\n");
+      out.write("\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t\t\t<div class=\"btn-group\">\n");
+      out.write("\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-default dropdown-toggle usa\" data-toggle=\"dropdown\">\n");
+      out.write("\t\t\t\t\t\t\t\t\tDOLLAR\n");
+      out.write("\t\t\t\t\t\t\t\t\t<span class=\"caret\"></span>\n");
+      out.write("\t\t\t\t\t\t\t\t</button>\n");
+      out.write("\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">\n");
+      out.write("\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Canadian Dollar</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Pound</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t</ul>\n");
+      out.write("\t\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t</div>-->\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t<div class=\"col-sm-4 \">\n");
+      out.write("\t\t\t\t\t\t<div class=\"search_box pull-right\">\n");
+      out.write("\t\t\t\t\t\t\t<input type=\"text\" placeholder=\"Search\"/>\n");
+      out.write("\t\t\t\t\t\t\t<a href=\"\"><i class=\"fa fa-search\"></i></a>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t<div class=\"col-sm-5\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"shop-menu pull-right\">\t\n");
+      out.write("\t\t\t\t\t\t\t<ul class=\"nav navbar-nav\">\n");
+      out.write("\t\t\t\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-user\"></i> ADMINISTRATEUR</a></li>\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"#\">|</a></li>\n");
+      out.write("                                                                \n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"logout.jsp\"><i class=\"fa fa-unlock\"></i> Déconnecter</a></form></li>\n");
+      out.write("                                                                \n");
+      out.write("                                                        </ul>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div><!--/header-middle-->\n");
+      out.write("\t\n");
+      out.write("\t\t<div class=\"header-bottom\"><!--header-bottom-->\n");
+      out.write("\t\t\t<div class=\"container\">\n");
+      out.write("\t\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t\t<div class=\"col-sm-12\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"navbar-header\">\n");
+      out.write("\t\t\t\t\t\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-collapse\">\n");
+      out.write("\t\t\t\t\t\t\t\t<span class=\"sr-only\">Toggle navigation</span>\n");
+      out.write("\t\t\t\t\t\t\t\t<span class=\"icon-bar\"></span>\n");
+      out.write("\t\t\t\t\t\t\t\t<span class=\"icon-bar\"></span>\n");
+      out.write("\t\t\t\t\t\t\t\t<span class=\"icon-bar\"></span>\n");
+      out.write("\t\t\t\t\t\t\t</button>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\t<div class=\"mainmenu pull-left\">\n");
+      out.write("\t\t\t\t\t\t\t<ul class=\"nav navbar-nav collapse navbar-collapse\">\n");
+      out.write("\t\t\t\t\t\t\t\t<li><a href=\"index.html\" class=\"active\"><i class=\"fa fa-home\"></i> Home</a></li>\n");
+      out.write("                                                                <li class=\"dropdown\"><a href=\"administrateur.jsp\"><i class=\"fa fa-circle\"></i> Gestion Articles</a>     </li> \n");
+      out.write("                                                                <li class=\"dropdown\"><a href=\"gestionclient.jsp\"><i class=\"fa fa-users\"></i> Gestion Clients</a> </li> \n");
+      out.write("                                                                <li class=\"dropdown\"><a href=\"gestioncommande.jsp\"><i class=\"fa fa-file-text\"></i> Gestion Commandes</a></li> \t\t\n");
+      out.write("\t\t\t\t\t\t\t</ul>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div><!--/header-bottom-->\n");
+      out.write("\t</header><!--/header-->\n");
+      out.write("\n");
+      out.write("\t\n");
+      out.write("\t<section>\n");
+      out.write("\t\t<div class=\"container\">\n");
+      out.write("\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t\n");
+      out.write("\t\t\t\t<div class=\"col-sm-12 \">\n");
+      out.write("                                    ");
+ if (session.getAttribute("page").equals("liste")) { 
+      out.write("\n");
+      out.write("                                   \n");
+      out.write("                                    \n");
+      out.write("                                    <div class=\"t-article\">                                        \n");
+      out.write("                                        <p>Liste des articles</p>  \n");
+      out.write("                                       \n");
+      out.write("                                    <table border=\"0\">\n");
+      out.write("                                        <thead>\n");
+      out.write("                                            <tr>\n");
+      out.write("                                                <th></th>\n");
+      out.write("                                                <th>Reference</th>\n");
+      out.write("                                                <th>Article</th>\n");
+      out.write("                                                <th>Description</th>\n");
+      out.write("                                                <th>Prix</th>\n");
+      out.write("                                                <th>Qte</th>\n");
+      out.write("                                                <th>Action</th>\n");
+      out.write("                                            </tr>\n");
+      out.write("                                        </thead>\n");
+      out.write("                                        <tbody>\n");
+      out.write("                                            ");
+
+                                                ArticleDAO dao = new ArticleDAO();
+                                             Vector<Article> articles = dao.listerArticles();          
+                                                for(int i = 0; i< articles.size(); i ++)              
+                                             { 
+                                            
+      out.write("\n");
+      out.write("                                            <tr>\n");
+      out.write("                                        <form action=\"GestionArticle\" method=\"GET\" >\n");
+      out.write("                                                <td class=\"small-img\"><img src=\"images/articles/");
+      out.print( articles.get(i).getImg() );
+      out.write("\"></td>\n");
+      out.write("                                                <td>");
+      out.print( articles.get(i).getRef());
+      out.write("</td>\n");
+      out.write("                                                <td >");
+      out.print( articles.get(i).getNom() );
+      out.write("</td>\n");
+      out.write("                                                <td>");
+      out.print( articles.get(i).getDes());
+      out.write("</td>\n");
+      out.write("                                                <td id=\"prix-c\">");
+      out.print( articles.get(i).getPrix());
+      out.write(" DT</td>\n");
+      out.write("                                                <td>");
+      out.print( articles.get(i).getQte());
+      out.write("</td>\n");
+      out.write("                                                <td>\n");
+      out.write("                                                    <input type=\"hidden\" value=\"");
+      out.print( articles.get(i).getRef());
+      out.write("\" name=\"reference\">\n");
+      out.write("                                                    <button class=\"btn btn-red\" type=\"submit\" value=\"supprimer\" name=\"supprimer\"  >supprimer  <i class=\"fa fa-trash-o\"></i></button>\n");
+      out.write("                                                    <button class=\"btn btn-green\" type=\"submit\" value=\"modifier\" name=\"modifier\" >modifier  <i class=\"fa fa-edit\"></i></button>\n");
+      out.write("                                                </td>\n");
+      out.write("                                                \n");
+      out.write("                                        </form>        \n");
+      out.write("                                            </tr>\n");
+      out.write("                                            ");
+} 
+                                            
+      out.write("\n");
+      out.write("                                        </tbody>\n");
+      out.write("                                    </table>\n");
+      out.write("                                    </div>\n");
+      out.write("                                        ");
+}
+                                    else if ((session.getAttribute("page").equals("modifier"))){
+                                        
+                                            int a =Integer.parseInt(session.getAttribute("reference") + "");
+                                               ArticleDAO dao = new ArticleDAO();
+                                             Vector<Article> articles = dao.listerArticlesByRef(a);      
+                                        
+      out.write("\n");
+      out.write("                                           <div class=\"t-article-modif\">                                        \n");
+      out.write("                                              <p> Article a modifier </p>\n");
+      out.write("                                              <div class=\"col-sm-4\">\n");
+      out.write("                                                  <div class=\"image_modif\">\n");
+      out.write("                                                      <img src=\"images/articles/");
+      out.print(articles.get(0).getImg());
+      out.write("\">\n");
+      out.write("                                                      <p>");
+      out.print(articles.get(0).getNom());
+      out.write("</p>\n");
+      out.write("                                                  </div>\n");
+      out.write("                                                  \n");
+      out.write("                                              </div>\n");
+      out.write("                                               \n");
+      out.write("                                                <div class=\"col-sm-offset-4\">\n");
+      out.write("                                                    <form method=\"POST\" action=\"ModifierArticle_servlet\" >\n");
+      out.write("                                                        <table> \n");
+      out.write("                                                                <tr>\n");
+      out.write("                                                                    <td>num article :</td><td><input type=\"number\" name=\"ref_art\" id=\"ref_art\" value=\"");
+      out.print(articles.get(0).getRef());
+      out.write("\" readonly ></td>\n");
+      out.write("                                                                </tr>\n");
+      out.write("                                                                <tr>\n");
+      out.write("                                                                    <td>Nom article :</td><td><input type=\"text\" name=\"nom_art\" id=\"nom_art\" value=\"");
+      out.print(articles.get(0).getNom());
+      out.write("\" required ></td>\n");
+      out.write("                                                                </tr>\n");
+      out.write("                                                                <tr>\n");
+      out.write("                                                                    <td>description :</td> <td><input type=\"text\" name=\"des_art\" id=\"des_art\" value=\"");
+      out.print(articles.get(0).getDes());
+      out.write("\" required ></td>\n");
+      out.write("                                                                </tr>\n");
+      out.write("                                                                <tr>\n");
+      out.write("                                                                    <td>Prix :</td><td><input type=\"number\" name=\"prix_art\" id=\"prix_art\" value=\"");
+      out.print(articles.get(0).getPrix());
+      out.write("\" required ></td>\n");
+      out.write("                                                                </tr>\n");
+      out.write("                                                                <tr>\n");
+      out.write("                                                                    <td>Quantité :</td><td><input type=\"number\"  name=\"qte_art\" id=\"qte_art\" value=\"");
+      out.print(articles.get(0).getQte());
+      out.write("\" required></td>\n");
+      out.write("                                                                </tr>\n");
+      out.write("                                                                <tr>\n");
+      out.write("                                                                    <td>Image :</td><td class=\"sansdecore\"><input type=\"file\" name=\"image_art\" id=\"image_art\"  ></td>\n");
+      out.write("                                                                </tr>\n");
+      out.write("           \n");
+      out.write("           \n");
+      out.write("                                                                    <td></td><td class=\"sansbordure \" >\n");
+      out.write("                                                                        <input type=\"hidden\" value=\"");
+      out.print(articles.get(0).getImg());
+      out.write("\" name=\"old_img\">\n");
+      out.write("                                                                        <button class=\"btn btn-green\" type=\"submit\" value=\"modifier\" name=\"modifier\" >Modifier  <i class=\"fa fa-edit\"></i></button>\n");
+      out.write("                                                                        <button class=\"btn btn-red\" type=\"submit\" value=\"retour\" name=\"retour\" >annuler <i class=\"fa fa-arrow-circle-left\"></i></button>\n");
+      out.write("         \n");
+      out.write("                                                        </table>\n");
+      out.write("                                                    </form>\n");
+      out.write("                                                </div>\n");
+      out.write("                                           </div>\n");
+      out.write("                                               \n");
+      out.write("\t\t\t\t\t");
+} 
+                                    else{
+      out.write("\n");
+      out.write("                                    <div class=\"col-sm-12\">\n");
+      out.write("                                        <div class=\"col-sm-4\">\n");
+      out.write("                                            <di><i class=\"fa fa-5x fa-user\"></i></di>\n");
+      out.write("                                        </div>\n");
+      out.write("                                        <div class=\"col-sm-4\"></div>\n");
+      out.write("                                        <div class=\"col-sm-4\"></div>\n");
+      out.write("                                    </div>\n");
+      out.write("                                    \n");
+      out.write("                                    ");
+}
+      out.write("\n");
+      out.write("\t\t\t\t\t<!--/category-tab-->\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t<!--/recommended_items-->\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t</section>\n");
+      out.write("\t\n");
+      out.write("\t\n");
+      out.write("\t<footer id=\"footer\"><!--Footer-->\n");
+      out.write("\t\t\n");
+      out.write("\t\t\n");
+      out.write("\t\t<div class=\"footer-widget\">\n");
+      out.write("\t\t\t<div class=\"container\">\n");
+      out.write("\t\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t\t<div class=\"col-sm-9\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"single-widget\">\n");
+      out.write("\t\t\t\t\t\t\t<script type=\"text/javascript\" src=\"http://maps.google.com/maps/api/js?sensor=false\"></script><div style=\"overflow:hidden;height:300px;width:850px;\"><div id=\"gmap_canvas\" style=\"height:300px;width:850px;\"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class=\"google-map-code\" href=\"http://www.trivoo.net/gutscheine/sheego/\" id=\"get-map-data\">sheego gutschein</a></div><script type=\"text/javascript\"> function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(35.8352413,10.612540800000033),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById(\"gmap_canvas\"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(35.8352413, 10.612540800000033)});infowindow = new google.maps.InfoWindow({content:\"<b>exotec</b><br/>polytech sousse<br/> sousse\" });google.maps.event.addListener(marker, \"click\", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>\n");
+      out.write("\t\t\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("\t\t\t\t\t<div class=\"col-sm-3\">\n");
+      out.write("\t\t\t\t\t\t<div class=\"single-widget\">\n");
+      out.write("\t\t\t\t\t\t\t<h2>GERANT</h2>\n");
+      out.write("\t\t\t\t\t\t\t<img src=\"images/hedi.jpg\">\n");
+      out.write("\t\t\t\t\t\t\t\t<p>HADDAR MOHAMMED HEDI <p>\n");
+      out.write("\t\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t</div>\n");
+      out.write("\t\t\t\t\t\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t\t\n");
+      out.write("\t\t<div class=\"footer-bottom\">\n");
+      out.write("\t\t\t<div class=\"container\">\n");
+      out.write("\t\t\t\t<div class=\"row\">\n");
+      out.write("\t\t\t\t\t<p class=\"pull-left\">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>\n");
+      out.write("\t\t\t\t\t<p class=\"pull-right\">Designed by <span><a target=\"_blank\" href=\"http://www.themeum.com\">HADDAR MOHAMMED HEDI</a></span></p>\n");
+      out.write("\t\t\t\t</div>\n");
+      out.write("\t\t\t</div>\n");
+      out.write("\t\t</div>\n");
+      out.write("\t\t\n");
+      out.write("\t</footer>\n");
+      out.write("\t\n");
+      out.write("\n");
+      out.write("  \n");
+      out.write("    <script src=\"js/jquery.js\"></script>\n");
+      out.write("\t<script src=\"js/bootstrap.min.js\"></script>\n");
+      out.write("\t<script src=\"js/jquery.scrollUp.min.js\"></script>\n");
+      out.write("\t<script src=\"js/price-range.js\"></script>\n");
+      out.write("    <script src=\"js/jquery.prettyPhoto.js\"></script>\n");
+      out.write("    <script src=\"js/main.js\"></script>\n");
+      out.write("</body>\n");
+      out.write("</html>");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
